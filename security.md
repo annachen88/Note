@@ -70,9 +70,17 @@
     * Pslist : 顯示程序、連結訊息 `-d`執行緒 `-m`記憶體 `-x`程序、記憶體、執行緒 `-t`程序樹狀圖 `-s`工作管理員
     * Psservice : 透過本機或遠端列出控制系統的工具 `-u` username `-p`password ...
     * RootkitRevealer : 掃描登入檔、本地磁碟區域尋找
-  * Rootkit產生的紀錄：**1)IP、網路卡資訊 2)連線資訊 3)惡意程式本身 4)數位行為 **
-  * 
+  * Rootkit產生的紀錄： **1)IP、網路卡資訊 2)連線資訊 3)惡意程式本身 4)數位行為**
 ## Chapter 3
+###### 數字系統與安全
+* 3-1 
+   * 模數運算：對訊息進行安全機制的演算
+     * Modular Arithmetic模數算數 `(x+y)mod n = [(x mod n)+(y mod n)]mod n`
+     * 尤拉函數 Eular Totient Function
+     * Fermat's Little Theorem 費瑪小定理
+     * 尤拉廣義定理 Eular Generalization Theorem 
+     * 質數測試 Prime
+* 3-2 中國餘數定理 Chinese Reminder Theorem , CRT
 ## Chapter 13
 ## Chapter 14
 ## Chapter 15
