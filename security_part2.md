@@ -45,4 +45,33 @@
 * 自然人憑證：推動GPKI（Government Public Key Intrastructure），向管理中心GRCA(Governmernt Root Certification Authority)
  SCA(Subordinate CA)申請網路身份憑證，未來可直接報稅、繳款、駕照。 
 ## Chapter 14
+###### 網路安全協定
+* IPSec Internet Protocol Security IP安全通訊原則
+  基於TCP的機制，在傳送遺失封包（包含IP位置、主體資料）時，會再次傳送。  
+  分為兩種傳送模式**「傳輸模式」IP位置傳輸安全，雙方能直接執行IPSec，封包及標示及來源目的位置。**    
+  **「隧道模式」不需直接執行IPSec，傳送、接收在路由器、夾道Gateway的New IP Header建置下保護封包避免洩露IP位置**    
+  * 不同於一般安全保護機制 特色：
+    * 以OSI設計為基礎，因此應用程式可執行此安全服務
+    * IP傳送封包具獨立性
+    * 不需特意訓練使用者或升級應用程式(包容性)
+    * 有end to end的安全機制，可抵擋網路攻擊
+* VPN的安全通訊協定包含：
+    * **IPSec**
+      運作三個部分：**支援IP封包內相關資料、通訊參數安全而設計**
+      * **AH (Authentication Header) 對訊息來源做鑑定Hash-md5/SHA**
+        * 加解密演算法：CBC--->3DES IDEA RC-5 CAST-128 Blowfish
+        * 訊息鑑定演算法：MD5、SHA、Tiger
+        * HASH函數實作MAC--->HMAC-MD5-96、 HMAC-SHA-96、HMAC-Tiger-96
+      * **ESP (Encapsulation Security Payload) 具有保護資料、資料來源鑑定功能、加密**
+      * **IKE (Internet Key Exchange) 雙方取得金鑰的一致性，執行過程自動交換密、鑰，提供不同協定ISAKMP、Oakley、SKEMI**  
+    * **L2F**：
+      非同步的網路傳輸ATM Asynchronous Transfer Mode
+    * **PPTP**:
+      為PPP Point-to-point的延伸，連線可直接以ISP 所提供的的網路連線，能鑑定訊息來源並加密傳送
+    * **L2P**
+* IPSec 運作：以ip的封包方式傳送，因此與IP封包格式相關包含IPv6 IPv4，新版對密碼安全機制有關，分別採用對稱、公開金鑰密碼、HASH函數達到密碼機密性。  
+**IPv4 總長160位元 來源ip-32位元 目的ip-32位元.**  
+**IPv6 總長320位元 來源ip-128位元 目的ip-128位元.**  
+![image](https://github.com/annachen88/Note/blob/dd1224f0452cb3aed57eea1ccd0406461d3eff88/IPSec.png)
+* SA Security Association：當一部電腦傳送至另一部電腦時需要建立的連線，建立安全關係。
 ## Chapter 15
